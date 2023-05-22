@@ -1,0 +1,11 @@
+{
+  "name": "projet-under-the-sea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./sass/main.scss:./style.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

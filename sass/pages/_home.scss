@@ -1,0 +1,519 @@
+
+
+// HEADER --------------------------------------------------
+
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+header img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+    
+    -webkit-mask-image: linear-gradient( 
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.95) 90%,
+        rgb(0 0 0 / 0)
+   ) ;
+
+   mask-image: linear-gradient( 
+    rgb(0 0 0 / 1),
+    rgb(0 0 0 / 0.95) 80%,
+    rgb(0 0 0 / 0)
+    ) ;
+
+}
+
+#header__jellyfish{
+    left: 800px;
+    z-index: 5;
+}
+
+#front__header{
+    z-index: 10;
+}
+
+.header__button{
+    @include white-background;
+
+    margin-top: 450px;
+    margin-bottom: 100px;
+    
+    z-index: 80;
+
+    &:hover{
+        @include blue-background;
+        cursor: pointer;
+    }
+}
+
+
+// SECTION -------------------------------------------------
+
+
+
+.experience__container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+h2 {
+    font-size: 2rem;
+    padding: 4rem 0 2rem 0;
+}
+
+.title__container{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    text-align: center;
+    & > p {
+        padding-top: 2rem;
+    }
+}
+
+
+// OUR EXPERIENCES
+
+.our-experiences__container{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.experience__container{
+  display: flex;
+
+  @include XL {
+    flex-direction: column;
+  }
+}
+
+.inside-page__heading,
+.card-front__text-view { 
+    color: $turquoise; 
+}
+
+.card-front__tp { 
+    color: $white; 
+}
+
+.inside-page__text {
+  color: $darkblue;
+}
+
+.card-section {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+    width: 15rem;
+    height: 15rem;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.flip-card {
+  height: 15rem;
+  perspective: 100rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  width: 15rem;
+  z-index: 100;
+}
+
+.flip-card > * {
+  visibility: visible;
+}
+
+.flip-card__container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-front {
+  background-color: $white;
+  height: 15rem;
+  width: 15rem;
+}
+
+.card-front__tp {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 12rem;
+  padding: .75rem;
+}
+
+.card-front__img-container{
+    width: 150px;
+    height:150px;
+    background: $turquoise;
+    border-radius: 50%;
+}
+
+.card-front__img{
+    width: 100%;
+}
+
+.card-front__bt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card-back {
+  background-color: $white;
+  transform: rotateY(180deg);
+}
+
+.video__container {
+  clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.inside-page {
+  background-color: $white;
+  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.inside-page__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  text-align: center; 
+  width: 100%;
+}
+
+.inside-page__button{
+    color: $darkblue;
+    &:hover{
+        color: $white;
+    }
+}
+
+.card:hover {
+  box-shadow:
+  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  width: 30rem;
+}
+
+.card:hover .flip-card__container {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .inside-page {
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+}
+
+
+// VaLUES
+
+.values__container{
+    background-color: $darkblue;
+    opacity: 0.9;
+    padding-bottom: 4rem;
+    @include S {
+      padding-bottom: 0rem;
+    }
+
+}
+
+.values__text-container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.values__grid-container{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 30px 1fr;
+  grid-row-gap : 1rem;
+
+  @include S {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 6rem;
+  }
+}
+
+.values__span{
+  font-size: 1.5rem;
+  display: inline-block;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.values__text{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding-right: 3rem;
+}
+
+.values__button{
+  grid-column: 2/3;
+  grid-row: -1/1;
+  align-self: center;
+  @include S {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+//OUR SUCESSES
+
+.numbers__container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card-numbers__container{
+    width: 80%;
+    margin: 0 auto;
+    @include flex-center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include S {
+      width: 100%;
+      flex-direction: column;
+    }
+
+}
+
+.card-number{
+    width: 12rem;
+    height: 12rem;
+    background-color: $turquoise;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+    transition: all 0.5s ease;
+
+    @include XL {
+      margin: 2rem;
+    }
+
+    &__number{
+        font-size: 3rem;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: $white;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__text{
+        padding-top: 2px ;
+        font-size: 1.2rem;
+    }
+    &__explanation{
+        font-size: 1rem;
+        padding-top: 20px;
+        display: block;
+    }
+
+    & > img{
+        width: 8rem;
+        height: 8rem;
+        display: none;
+    }
+
+    &:hover{
+        background-color: $darkblue;
+        color: $white;
+        transition: all 1s ease-out ;
+
+
+        & > img{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .card-number__number:after{
+            display: none;
+        }
+        .card-number__text{
+            transform: translateY(-0.6rem);
+        }
+        .card-number__explanation{
+            display: none;
+        }
+    }
+
+
+}
+
+.card-number__image{
+  width: 2px;
+}
+
+// SOCIAL NETWORKS
+
+.sea-you-soon__container{
+    width: 80%+1;
+    margin : 0 auto;
+    margin-top: 10rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    border: 1px solid $white;
+    border-radius: 5px;
+
+    @include S {
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+    }
+}
+
+.sea-you-soon__grid-container{
+    display: grid;
+    grid-template-rows: 70px 70px;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+
+    @include XS {
+      grid-template-rows: 3rem 6rem 3rem 6rem  ;
+      grid-template-columns: 1fr;
+    }
+}
+
+
+.contact__container-link {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+    @include XS {
+      grid-row: 4/5;
+      grid-column: 1/2;
+    }
+}
+
+.sea-you-soon__wrapper {
+
+    width: 80%;
+    margin: 10px auto;
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    @include XS {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+
+    & > ul {
+    list-style: none;
+
+        & > li {
+            width: 60px;
+            height: 60px;
+            margin: 0 10px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 5px solid $white;
+            float: left;
+            transition: all 0.5s ease;
+
+            .fa {
+                color: $white;
+                margin-top: 8px;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
+
+
+  .sea-you-soon__wrapper ul li:hover.facebook {
+    @include social-network-border (#3b5998)
+  }
+  
+  .sea-you-soon__wrapper ul li:hover .fa-facebook {
+    @include social-network (#3b5998)
+  }
+
+  .sea-you-soon__wrapper ul li:hover.twitter {
+    @include social-network-border (#00aced)
+  }
+  
+  .sea-you-soon__wrapper ul li:hover .fa-twitter {
+    @include social-network (#00aced)
+  }
+  
+  .sea-you-soon__wrapper ul li:hover.instagram {
+    @include social-network-border (#bc2a8d)
+  }
+  
+  .sea-you-soon__wrapper ul li:hover .fa-instagram {
+    @include social-network (#bc2a8d)
+  }
+
+  
+  

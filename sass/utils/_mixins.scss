@@ -1,0 +1,58 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin blue-background {
+    background-color: $turquoise;
+    color: $white;
+}
+
+@mixin white-background {
+    background-color: $white;
+    color: $turquoise;
+}
+
+@mixin logo-transition{
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          animation: display 10s #{$i * 2}s infinite;
+        }
+    }
+}
+
+
+@mixin social-network($color) {
+    color: $color;
+    text-shadow: 0 0 15px $color;
+    transition: all 0.5s ease;
+}
+
+@mixin social-network-border($color) {
+    border: 5px solid $color;
+    box-shadow: 0 0 15px $color;
+    transition: all 0.5s ease;
+}
+
+
+// BREAKPOINTS
+
+@mixin XS {
+    @media screen and (max-width: map-get($breakpoints, XS)){
+        @content ;
+    }
+}
+
+@mixin S {
+    @media screen and (max-width: map-get($breakpoints, S)){
+        @content ;
+    }
+}
+
+@mixin XL {
+    @media screen and (max-width: map-get($breakpoints, XL)){
+        @content ;
+    }
+}
+

@@ -1,0 +1,244 @@
+.contact__global-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+// FISH ----------------------------------------------------
+
+.contact-fish__img {
+width: 100%;
+width: 200px;
+height: 200px;
+position: absolute;
+top: 70%;
+right: 50%;
+animation: fish 25s ease-in infinite;
+    
+}
+  
+@keyframes fish {
+    0% { right: calc(100% + 30px); top: 80%;}
+    50% {top: 70%}
+    100% {right: -20%; top: 75%;}
+}
+
+
+
+// CONTACT FORM ---------------------------------------------
+
+
+.contact-form__container{
+    width: 60%;
+    height: 100vh;
+    margin: 0px auto;
+    @include S {
+        width: 80%;  
+    }
+
+    z-index: 1000;
+}
+
+.contact-form__container h2{
+    padding-top: 200px;
+}
+
+.contact-form__grid{
+    display: grid;
+    grid-template-rows: repeat(5,auto);
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 10px;
+    @include S {
+        grid-template-rows: repeat(5,auto);
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__firstname{
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+}
+.contact-form__lastname{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    @include S {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+}
+
+.contact-form__email{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    @include S {
+        grid-row: 3/4;
+        grid-column: 1/-1;
+    }
+}
+
+.contact-form__comment{
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    @include S {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+    }
+}
+
+.contact-form__button{
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    @include S {
+        grid-row: 5/6;
+        grid-column: 1/-1;
+    }
+}
+
+input, textarea {
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    height: 7rem;
+}
+
+.contact-form__submit-button{
+    background-color: $salmon;
+    color: $white;
+    width: 100px;
+    margin: 20px auto;
+    font-weight: 900;
+    letter-spacing: 1px;
+    &:hover{
+        background-color: $white;
+        color: $salmon;
+    }
+}
+
+
+
+// BUBBLE  -------------------------------------------
+
+.ocean {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+  
+
+  
+  .bubbles {
+    width: 100%;
+    height: 100%;
+    animation: bubbles 10s linear infinite;
+  }
+  
+      @keyframes bubbles {
+        0%, 100% {transform: rotate(-5deg);}
+        50% {transform: rotate(5deg);}
+      }
+  
+  .bubbles span {
+    border-radius: 100%;
+    position: absolute;
+    background-color: $white;
+    bottom: 0;
+    animation: bubble 10s ease-in-out infinite;
+  }
+  
+      @keyframes bubble {
+        0% {bottom: 0%; opacity: 0;}
+        100% {bottom: 150%;}
+      }
+  
+  .bubbles span:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    left: 10%;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    opacity: 0.2;
+  }
+  
+  .bubbles span:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    opacity: 0.1;
+  }
+  
+  .bubbles span:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+    opacity: 0.3;
+  }
+  
+  .bubbles span:nth-child(4) {
+    width: 35px;
+    height: 35px;
+    opacity: 0.5;
+    left: 40%;
+    animation-delay: 8s;
+    animation-duration: 8s;
+    opacity: 0.2;
+  }
+  
+  .bubbles span:nth-child(5) {
+    width: 45px;
+    height: 45px;
+    opacity: 0.5;
+    left: 60%;
+    animation-delay: 10s;
+    animation-duration: 15s;
+    opacity: 0.1;
+  }
+  
+  .bubbles span:nth-child(6) {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    left: 80%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+    opacity: 0.4;
+  }
+  
+  .bubbles span:nth-child(7) {
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    left: 90%;
+    animation-duration: 25s;
+    opacity: 0.3;
+  }
+  
+  .bubbles span:nth-child(8) {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    left: 50%;
+    animation-duration: 10s;
+    opacity: 0.2;
+  }
+  
+
+  

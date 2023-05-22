@@ -1,0 +1,33 @@
+.button{
+    text-decoration: none;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 9999px;
+
+    &--sea{
+        border: 2px solid #7EBEF1;
+        background-color: transparent;
+        background-image: linear-gradient( to right, transparent 50%, $lightblue 50%, $turquoise);
+        background-size: 200%;
+    
+        color: $white;
+        
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover{
+            background-position: 100%;
+            color: $darkblue;
+            border: 1px solid $white;
+        }
+    }
+}
+
+.button a{
+    text-decoration: none;
+    color: $white;
+    font-size: 1rem;
+    &:hover{
+        color: $darkblue;
+    }
+}

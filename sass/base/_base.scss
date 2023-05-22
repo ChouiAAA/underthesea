@@ -1,0 +1,57 @@
+*,::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($turquoise 30%,$seablue );
+    background-color: $seablue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    color: $white;
+    position: relative;
+}
+
+section{
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+section h1 {
+
+    font-size: 5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 2rem;
+
+    background-image:  url(/Ressources/text-back.png);
+    background-clip: text;
+    background-size: cover;
+    color: transparent;
+
+    @include S {
+        font-size: 4rem;
+    }
+}
+
+footer{
+    width: 100%;
+    height: 6rem;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > h5{
+        font-size: 1.2rem;
+    }
+}

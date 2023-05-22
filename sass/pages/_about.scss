@@ -1,0 +1,180 @@
+.about__global-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about__orange-fish-container {
+    width: 20%;
+    height: auto;
+    background: #000;
+    position: relative;
+    margin-right: 0;
+    margin-top: 200px;
+
+    @include XS {
+        display: none; 
+    }
+
+    @include XL {
+        width: 30%;
+        margin-right: 0;
+        margin-top: 200px;
+    }
+}
+
+.about__orange-fish-container img{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 80%;
+    height: auto;
+
+    @include XL {
+        width: 60%;
+    }
+
+}
+
+.about__section {
+    width: 80%;
+    height: auto;
+    margin: 0 20px;
+    margin-left: auto;
+
+    @include XS {
+        margin: 0 auto;
+    }
+
+    @include XL {
+        width: 70%;
+        height: auto;
+        margin: 0 100px;
+        margin-left: auto;
+    }
+
+}
+
+.about__section h1 {
+    padding: 0px 0 40px 0;
+    text-align: start;
+
+    @include XS {
+        padding-top: 200px;
+    }
+}
+
+.about__section p {
+    padding: 10px 0;
+    text-align: start;
+}
+
+.about__fish-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    @include XS {
+        flex-direction: column;
+    };
+}
+
+.about__fish-card-container p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.about__fish-image-container {
+    width: 10rem;
+    height: 10rem;
+    
+    background: $lightblue;
+    background-image: url(/Ressources/round\ back.png);
+    background-size: cover;
+    border: 2px solid $lightblue;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    @include flex-center;
+
+    @include XS {
+        width: 15rem;
+        height: 15rem;
+        margin: 20px;
+    };
+
+}
+
+.about__fish-image-container img {
+    width: 8rem;
+    height: 8rem;
+
+    @include XS {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+.about__button-container{
+    width: 100%;
+    display: flex;
+}
+
+.about__contact-button{
+    margin: 80px auto;
+    display: inline-block;
+}
+
+.seaweed-container{
+    height: 300px;
+    width: 100%;
+
+    background: url(/Ressources/About-back.png) ;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+
+    @include XS {
+        height: 70px;
+    }
+
+    @include S {
+        height: 100px;
+    }
+
+    @include XL {
+        height: 200px;
+    }
+}
+
+#blueFish, #greenFish{
+    animation: rightComing 2000ms linear;
+}
+
+#yellowFish{
+    animation: leftComing 2000ms linear;
+}
+
+// ANIMATION ------------------------------------------------
+
+@keyframes rightComing {
+    0%{
+        transform: translateX(150px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes leftComing {
+    0%{
+        transform: translateX(-150px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
