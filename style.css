@@ -30,7 +30,7 @@ section h1 {
   letter-spacing: 2px;
   font-weight: 700;
   padding: 2rem;
-  background-image: url(/Ressources/text-back.png);
+  background-image: url(./Ressources/text-back.png);
   background-clip: text;
   background-size: cover;
   color: transparent;
@@ -265,7 +265,7 @@ nav li {
   width: 10rem;
   height: 10rem;
   background: #7EBEF1;
-  background-image: url(/Ressources/round\ back.png);
+  background-image: url(./Ressources/round\ back.png);
   background-size: cover;
   border: 2px solid #7EBEF1;
   border-radius: 50%;
@@ -307,7 +307,7 @@ nav li {
 .seaweed-container {
   height: 300px;
   width: 100%;
-  background: url(/Ressources/About-back.png);
+  background: url(./Ressources/About-back.png);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -1201,7 +1201,7 @@ h2 {
   height: auto;
   margin-top: 350px;
   background: #245AA7;
-  background-image: url(/Ressources/text-back.png);
+  background-image: url(./Ressources/text-back.png);
   background-attachment: fixed;
 }
 .reviews__title {
